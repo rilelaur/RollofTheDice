@@ -1,6 +1,7 @@
 ﻿'Laura Riley
 'RCET 0265
 'Spring 2021
+'Roll of the Dice
 'https://github.com/rilelaur/RollofTheDice.git
 
 Option Explicit On
