@@ -1,7 +1,7 @@
 ﻿'Laura Riley
 'RCET 0265
 'Spring 2021
-'
+'https://github.com/rilelaur/RollofTheDice.git
 
 Option Explicit On
 Option Strict Off
@@ -12,8 +12,8 @@ Module RollOfTheDice
 
         Console.WriteLine("Roll of the Dice")
 
-        'rolls the dice 1000 times  
-        For i = 0 To 1000
+        'rolls the dice 1000 times and increments whichever number that is generated
+        For i = 1 To 1000
             roll(RollDice(12)) += 1
         Next
 
