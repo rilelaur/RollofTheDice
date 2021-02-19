@@ -4,7 +4,7 @@
 '
 
 Option Explicit On
-Option Strict On
+Option Strict Off
 Module RollOfTheDice
 
     Sub Main()
@@ -37,8 +37,11 @@ Module RollOfTheDice
 
     '
     Function RollDice(maxNumber As Integer) As Integer
-        maxNumber = 12
-        Randomize(DateTime.Now.Millisecond)
-        Return CInt(Math.Floor(Rnd() * (maxNumber + 1)))
+        Randomize()
+
+        'Generates a number between 2 and 12
+        maxNumber = Int((12 - 2 + 1) * Rnd() + 2)
+
+        Return CInt(maxNumber)
     End Function
 End Module
