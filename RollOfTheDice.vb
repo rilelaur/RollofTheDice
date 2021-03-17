@@ -11,7 +11,7 @@ Module RollOfTheDice
     Sub Main()
         Dim roll(12) As Integer
 
-        Console.WriteLine("Roll of the Dice")
+        Console.WriteLine(StrDup(33, " ") & "Roll of the Dice" & StrDup(33, " "))
 
         'rolls the dice 1000 times and increments whichever number that is generated
         For i = 1 To 1000
