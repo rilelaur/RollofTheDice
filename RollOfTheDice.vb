@@ -5,7 +5,7 @@
 'https://github.com/rilelaur/RollofTheDice.git
 
 Option Explicit On
-Option Strict Off
+Option Strict On
 Module RollOfTheDice
 
     Sub Main()
@@ -15,7 +15,7 @@ Module RollOfTheDice
 
         'rolls the dice 1000 times and increments whichever number that is generated
         For i = 1 To 1000
-            roll(RollDice(12)) += 1
+            roll(RandomNumber(6) + RandomNumber(6)) += 1
         Next
 
         'writes the line above the row
@@ -36,13 +36,9 @@ Module RollOfTheDice
         Console.ReadLine()
     End Sub
 
-    '
-    Function RollDice(maxNumber As Integer) As Integer
-        Randomize()
-
-        'Generates a number between 2 and 12
-        maxNumber = Int((12 - 2 + 1) * Rnd() + 2)
-
-        Return CInt(maxNumber)
+    'Generates a random number
+    Function RandomNumber(maxNumber As Integer) As Integer
+        Randomize(DateTime.Now.Millisecond)
+        Return CInt(Math.Ceiling(Rnd() * maxNumber))
     End Function
 End Module
